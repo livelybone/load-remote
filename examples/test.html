@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LoadRemote</title>
+  <script src="../lib/umd/index.js"></script>
+</head>
+<body>
+<div id="module"></div>
+
+<script>
+var module = document.getElementById('module')
+// do something ...
+LoadRemote.loadRemote('https://cdn.jsdelivr.net/npm/pdfjs-dist@2.2.228/web/pdf_viewer.css').then((ev) => {
+  console.log(ev, ev.target)
+})
+LoadRemote.loadRemote('https://cdn.jsdelivr.net/npm/pdfjs-dist@2.2.228/web/pdf_viewer.css').then((ev) => {
+  console.log(ev)
+})
+</script>
+</body>
+</html>
